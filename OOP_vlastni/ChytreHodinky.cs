@@ -19,6 +19,15 @@ namespace OOP_vlastni
             return vydrzBaterie;
             
         }
+        
+        public void SetVydrzBaterie(string vydrzBaterie)
+        {
+            this.vydrzBaterie = vydrzBaterie;
+        }
 
+        public override string ToString()
+        {
+            return base.ToString() + "\nVýdrž baterie: " + vydrzBaterie + " mAh";
+        }
     }
 }

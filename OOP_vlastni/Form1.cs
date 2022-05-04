@@ -43,7 +43,7 @@ namespace OOP_vlastni
         private void button5_Click(object sender, EventArgs e)
         {
             chytreHodinky = new ChytreHodinky(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
-            MessageBox.Show(chytreHodinky.ToString() + "\nVýdrž baterie: " + chytreHodinky.GetVydrzBaterie() + " mAh");
+            MessageBox.Show(chytreHodinky.ToString());
         }
 
         private void button6_Click(object sender, EventArgs e)

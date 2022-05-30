@@ -42,6 +42,8 @@ namespace OOP_vlastni
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -88,9 +90,9 @@ namespace OOP_vlastni
             // 
             this.button5.Location = new System.Drawing.Point(212, 133);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 23);
+            this.button5.Size = new System.Drawing.Size(114, 59);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Chytré hodinky";
+            this.button5.Text = "Chytré hodinky\r\nUkáže světový čas a čas v zadaném pásmu\r\n";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -156,17 +158,36 @@ namespace OOP_vlastni
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 156);
+            this.label4.Location = new System.Drawing.Point(9, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Kapacita baterie (mAh)\r\n";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(12, 172);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 14;
+            this.textBox5.Text = "3";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(118, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "UTC-X";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 175);
+            this.ClientSize = new System.Drawing.Size(531, 215);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label3);
@@ -202,6 +223,8 @@ namespace OOP_vlastni
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
     }
 }
 

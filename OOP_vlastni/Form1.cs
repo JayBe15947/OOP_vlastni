@@ -43,8 +43,9 @@ namespace OOP_vlastni
 
         private void button5_Click(object sender, EventArgs e)
         {
-            chytreHodinky = new ChytreHodinky(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            chytreHodinky = new ChytreHodinky(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, int.Parse(textBox5.Text));
             MessageBox.Show(chytreHodinky.ToString());
+            chytreHodinky.Cas();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -56,6 +57,16 @@ namespace OOP_vlastni
         {
             //hodinky = new Hodinky(textBox1.Text, textBox2.Text, textBox3.Text);
             hodinky.Cas();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            chytreHodinky.Cas();// po znovu zadání v běhu programu nefunguje, proto používám jen jedno tlačítko
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

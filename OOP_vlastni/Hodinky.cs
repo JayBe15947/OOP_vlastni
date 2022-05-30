@@ -62,7 +62,7 @@ namespace OOP_vlastni
             
             
         }
-        public void Cas()
+        public virtual void Cas()
         {
             cas = DateTime.Now;
             MessageBox.Show("Datum a Čas: " + cas);

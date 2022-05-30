@@ -31,6 +31,7 @@ namespace OOP_vlastni
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //hodinky = new Hodinky(textBox1.Text, textBox2.Text, textBox3.Text);
             hodinky.Spust();
         }
 
@@ -53,6 +54,7 @@ namespace OOP_vlastni
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            //hodinky = new Hodinky(textBox1.Text, textBox2.Text, textBox3.Text);
             hodinky.Cas();
         }
     }

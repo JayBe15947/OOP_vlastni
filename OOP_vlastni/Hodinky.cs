@@ -15,6 +15,7 @@ namespace OOP_vlastni
         protected DateTime spusteniStopek;
         protected TimeSpan dobaOdSpusteniStopek;
         protected DateTime cas;
+        protected bool stopkySpusteny = false;
         public string Znacka
         {
             get
@@ -38,13 +39,28 @@ namespace OOP_vlastni
         }
         public void Spust()
         {
-            spusteniStopek = DateTime.Now;
-            MessageBox.Show("Stopky se spustily");
+            
+            if (!stopkySpusteny)
+            {
+                spusteniStopek = DateTime.Now;
+                stopkySpusteny = true;
+                MessageBox.Show("Stopky se spustily");
+            }
+            else MessageBox.Show("Stopky už jsou spuštěny!");
+
         }
         public void Zastav()
         {
-            dobaOdSpusteniStopek = DateTime.Now - spusteniStopek;
-            MessageBox.Show("Doba od spusteni:" + dobaOdSpusteniStopek.TotalSeconds + " sekund");
+            if (stopkySpusteny)
+            {
+                dobaOdSpusteniStopek = DateTime.Now - spusteniStopek;
+                MessageBox.Show("Doba od spusteni:" + dobaOdSpusteniStopek.TotalSeconds + " sekund");
+                stopkySpusteny = false;
+            }
+            else MessageBox.Show("Stopky už jsou spuštěny!");
+
+            
+            
         }
         public void Cas()
         {
